@@ -1,0 +1,41 @@
+package com.ly.bigdata.po;
+
+import com.baomidou.mybatisplus.annotation.IdType;
+import java.util.Date;
+
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import java.io.Serializable;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+/**
+ * <p>
+ * 
+ * </p>
+ *
+ * @author ybsan
+ * @since 2021-03-26
+ */
+@Data
+@EqualsAndHashCode(callSuper = false)
+public class NoticeInf implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    @TableId(value = "id", type = IdType.AUTO)
+    private Integer id;
+
+    private String title;
+
+    private String content;
+
+    /**
+     * 创建时间
+     */
+    private Date createdate;
+
+    private Integer userId;
+    @TableField(exist = false)
+    private UserInf user;
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ly.bigdata.mapper.SalaryInfMapper">
+
+    <resultMap id="SalResultMap" type="SalaryInf">
+        <id property="id" column="id"/>
+        <result property="deptId" column="dept_id"/>
+        <result property="jobId" column="job_id"/>
+        <result property="empId" column="emp_id"/>
+        <result property="salaryStation" column="salary_station"/>
+        <result property="salaryLevel" column="salary_level"/>
+        <result property="seniorityPay" column="seniority_pay"/>
+        <result property="performance" column="performance"/>
+        <result property="individualIncome" column="individual_income"/>
+        <result property="createDate" column="create_date"/>
+
+
+        <association property="emp" javaType="EmployeeInf">
+            <id property="id" column="emp_id"/>
+            <result property="name" column="ename"/>
+        </association>
+
+        <association property="job" javaType="JobInf">
+            <id property="id" column="job_id"/>
+            <result property="name" column="jname"/>
+        </association>
+
+        <association property="dept" javaType="DeptInf">
+            <id property="id" column="dept_id"/>
+            <result property="name" column="dname"/>
+        </association>
+    </resultMap>
+
+
+    <select id="selectSalAll" resultMap="SalResultMap">
+        select si.*,
+               ei.name ename,
+               di.name dname,
+               ji.name jname
+        from salary_inf si,
+             job_inf ji,
+             employee_inf ei,
+             dept_inf di
+        where si.dept_id = di.id
+          and si.job_id = ji.id
+          and si.emp_id = ei.id
+          and si.salary_station like #{content}
+
+    </select>
+
+
+    <select id="findSalById" resultMap="SalResultMap">
+        select si.*,
+               ei.name ename,
+               di.name dname,
+               ji.name jname
+        from salary_inf si,
+             job_inf ji,
+             employee_inf ei,
+             dept_inf di
+        where si.dept_id = di.id
+          and si.job_id = ji.id
+          and si.emp_id = ei.id
+          and si.emp_id = #{emp_id}
+
+    </select>
+</mapper>

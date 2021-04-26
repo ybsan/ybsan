@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ly.bigdata.mapper.DocumentInfMapper">
+
+    <resultMap id="DoResultMap" type="DocumentInf">
+        <id property="id" column="id"/>
+        <result property="userId" column="user_id"/>
+        <result property="title" column="title"/>
+        <result property="filename" column="filename"/>
+        <result property="remark" column="remark"/>
+        <result property="createdate" column="createdate"/>
+        <association property="user" javaType="UserInf">
+            <id property="id" column="user_id" />
+            <result property="username" column="username" />
+        </association>
+    </resultMap>
+
+
+    <select id="selectDoAll" resultMap="DoResultMap">
+        select di.*,
+               ui.username
+        from document_inf di,
+             user_inf ui
+        where
+            di.user_id = ui.id
+          and di.filename like #{content}
+    </select>
+
+</mapper>

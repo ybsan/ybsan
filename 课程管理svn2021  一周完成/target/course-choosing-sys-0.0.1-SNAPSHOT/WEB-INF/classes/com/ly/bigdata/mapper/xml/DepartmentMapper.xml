@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ly.bigdata.mapper.DepartmentMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ly.bigdata.entity.Department">
+        <id column="depart_id" property="departId" />
+        <result column="depart_name" property="departName" />
+        <result column="depart_director" property="departDirector" />
+        <result column="depart_email" property="departEmail" />
+        <result column="depart_introduce" property="departIntroduce" />
+    </resultMap>
+
+</mapper>

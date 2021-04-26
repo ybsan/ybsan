@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<module version="4" relativePaths="false" type="JAVA_MODULE"> 
+  <component name="NewModuleRootManager"> 
+    <exclude-output/>  
+    <orderEntry type="inheritedJdk"/>  
+    <!-- output url="file://$$MODULE_DIR$$/${maven.build.dest}"/ -->  
+    <!-- output-test url="file://$$MODULE_DIR$$/${maven.test.dest}"/ -->  
+    <content url="file://$MODULE_DIR$"> 
+      <!-- sourceFolder url="file://$$MODULE_DIR$$/${pom.build.sourceDirectory}" isTestSource="false"/ -->  
+      <!-- sourceFolder url="file://$$MODULE_DIR$$/${pom.build.testSourceDirectory}" isTestSource="true"/ -->  
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false"/>
+      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true"/>
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false"/>
+      <excludeFolder url="file://$MODULE_DIR$/target"/>
+    </content>  
+    <orderEntry type="sourceFolder" forTests="false"/>  
+    <!-- Next include each dependency:
+      <orderEntry type="module" module-name="${dep.artifactId}"/>
+      <orderEntry type="module-library">
+        <library name="${dep.artifactId}">
+          <CLASSES>
+            <root url="jar://${lib.path}!/"/>
+          </CLASSES>
+          <JAVADOC/>
+          <SOURCES/>
+        </library>
+      </orderEntry>
+     -->  
+    <output url="file://$MODULE_DIR$/target/classes"/>  
+    <output-test url="file://$MODULE_DIR$/target/test-classes"/>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/springframework/boot/spring-boot-starter-mail/2.4.4/spring-boot-starter-mail-2.4.4.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/springframework/boot/spring-boot-starter/2.4.4/spring-boot-starter-2.4.4.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/springframework/boot/spring-boot/2.4.4/spring-boot-2.4.4.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/springframework/spring-core/5.3.5/spring-core-5.3.5.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/springframework/spring-jcl/5.3.5/spring-jcl-5.3.5.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/springframework/spring-context/5.3.5/spring-context-5.3.5.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/springframework/spring-aop/5.3.5/spring-aop-5.3.5.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/springframework/spring-beans/5.3.5/spring-beans-5.3.5.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/springframework/spring-expression/5.3.5/spring-expression-5.3.5.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/springframework/boot/spring-boot-autoconfigure/2.4.4/spring-boot-autoconfigure-2.4.4.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/springframework/boot/spring-boot-starter-logging/2.4.4/spring-boot-starter-logging-2.4.4.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/apache/logging/log4j/log4j-to-slf4j/2.13.3/log4j-to-slf4j-2.13.3.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/apache/logging/log4j/log4j-api/2.13.3/log4j-api-2.13.3.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/slf4j/jul-to-slf4j/1.7.30/jul-to-slf4j-1.7.30.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/yaml/snakeyaml/1.27/snakeyaml-1.27.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/springframework/spring-context-support/5.3.5/spring-context-support-5.3.5.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/com/sun/mail/jakarta.mail/1.6.6/jakarta.mail-1.6.6.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/apache/tomcat/embed/tomcat-embed-jasper/9.0.44/tomcat-embed-jasper-9.0.44.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/apache/tomcat/embed/tomcat-embed-core/9.0.44/tomcat-embed-core-9.0.44.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/apache/tomcat/tomcat-annotations-api/9.0.44/tomcat-annotations-api-9.0.44.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/apache/tomcat/embed/tomcat-embed-el/9.0.44/tomcat-embed-el-9.0.44.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/eclipse/jdt/ecj/3.18.0/ecj-3.18.0.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/mysql/mysql-connector-java/8.0.23/mysql-connector-java-8.0.23.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/springframework/boot/spring-boot-starter-test/2.4.4/spring-boot-starter-test-2.4.4.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/springframework/boot/spring-boot-test/2.4.4/spring-boot-test-2.4.4.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/springframework/boot/spring-boot-test-autoconfigure/2.4.4/spring-boot-test-autoconfigure-2.4.4.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/com/jayway/jsonpath/json-path/2.4.0/json-path-2.4.0.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/net/minidev/json-smart/2.3/json-smart-2.3.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/assertj/assertj-core/3.18.1/assertj-core-3.18.1.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/junit/jupiter/junit-jupiter/5.7.1/junit-jupiter-5.7.1.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/junit/jupiter/junit-jupiter-api/5.7.1/junit-jupiter-api-5.7.1.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/junit/platform/junit-platform-commons/1.7.1/junit-platform-commons-1.7.1.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/junit/jupiter/junit-jupiter-params/5.7.1/junit-jupiter-params-5.7.1.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/junit/jupiter/junit-jupiter-engine/5.7.1/junit-jupiter-engine-5.7.1.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/junit/platform/junit-platform-engine/1.7.1/junit-platform-engine-1.7.1.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/mockito/mockito-core/3.6.28/mockito-core-3.6.28.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/net/bytebuddy/byte-buddy/1.10.22/byte-buddy-1.10.22.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/net/bytebuddy/byte-buddy-agent/1.10.22/byte-buddy-agent-1.10.22.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/objenesis/objenesis/3.1/objenesis-3.1.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/mockito/mockito-junit-jupiter/3.6.28/mockito-junit-jupiter-3.6.28.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/skyscreamer/jsonassert/1.5.0/jsonassert-1.5.0.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/springframework/spring-test/5.3.5/spring-test-5.3.5.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/xmlunit/xmlunit-core/2.7.0/xmlunit-core-2.7.0.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/projectlombok/lombok/1.18.18/lombok-1.18.18.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/apache/velocity/velocity-engine-core/2.3/velocity-engine-core-2.3.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/com/baomidou/mybatis-plus-boot-starter/3.4.2/mybatis-plus-boot-starter-3.4.2.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/com/baomidou/mybatis-plus/3.4.2/mybatis-plus-3.4.2.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/com/baomidou/mybatis-plus-extension/3.4.1/mybatis-plus-extension-3.4.1.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/com/baomidou/mybatis-plus-core/3.4.1/mybatis-plus-core-3.4.1.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/com/baomidou/mybatis-plus-annotation/3.4.1/mybatis-plus-annotation-3.4.1.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/com/github/jsqlparser/jsqlparser/3.2/jsqlparser-3.2.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/mybatis/mybatis/3.5.6/mybatis-3.5.6.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/mybatis/mybatis-spring/2.0.5/mybatis-spring-2.0.5.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/springframework/boot/spring-boot-starter-jdbc/2.4.4/spring-boot-starter-jdbc-2.4.4.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/com/zaxxer/HikariCP/3.4.5/HikariCP-3.4.5.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/springframework/spring-jdbc/5.3.5/spring-jdbc-5.3.5.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/springframework/spring-tx/5.3.5/spring-tx-5.3.5.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/springframework/boot/spring-boot-starter-web/2.4.4/spring-boot-starter-web-2.4.4.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/springframework/boot/spring-boot-starter-json/2.4.4/spring-boot-starter-json-2.4.4.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/springframework/spring-web/5.3.5/spring-web-5.3.5.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/com/fasterxml/jackson/core/jackson-databind/2.11.4/jackson-databind-2.11.4.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/com/fasterxml/jackson/core/jackson-annotations/2.11.4/jackson-annotations-2.11.4.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/com/fasterxml/jackson/core/jackson-core/2.11.4/jackson-core-2.11.4.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.11.4/jackson-datatype-jdk8-2.11.4.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.11.4/jackson-datatype-jsr310-2.11.4.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/com/fasterxml/jackson/module/jackson-module-parameter-names/2.11.4/jackson-module-parameter-names-2.11.4.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/springframework/boot/spring-boot-starter-tomcat/2.4.4/spring-boot-starter-tomcat-2.4.4.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/glassfish/jakarta.el/3.0.3/jakarta.el-3.0.3.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.44/tomcat-embed-websocket-9.0.44.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/springframework/spring-webmvc/5.3.5/spring-webmvc-5.3.5.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/javax/servlet/jstl/1.2/jstl-1.2.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/com/baomidou/mybatis-plus-generator/3.4.1/mybatis-plus-generator-3.4.1.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/springframework/boot/spring-boot-devtools/2.4.4/spring-boot-devtools-2.4.4.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/springframework/boot/spring-boot-starter-data-redis/2.4.4/spring-boot-starter-data-redis-2.4.4.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/springframework/data/spring-data-redis/2.4.6/spring-data-redis-2.4.6.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/springframework/data/spring-data-keyvalue/2.4.6/spring-data-keyvalue-2.4.6.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/springframework/data/spring-data-commons/2.4.6/spring-data-commons-2.4.6.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/springframework/spring-oxm/5.3.5/spring-oxm-5.3.5.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/io/lettuce/lettuce-core/6.0.3.RELEASE/lettuce-core-6.0.3.RELEASE.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/io/netty/netty-common/4.1.60.Final/netty-common-4.1.60.Final.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/io/netty/netty-handler/4.1.60.Final/netty-handler-4.1.60.Final.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/io/netty/netty-resolver/4.1.60.Final/netty-resolver-4.1.60.Final.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/io/netty/netty-buffer/4.1.60.Final/netty-buffer-4.1.60.Final.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/io/netty/netty-transport/4.1.60.Final/netty-transport-4.1.60.Final.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/io/netty/netty-codec/4.1.60.Final/netty-codec-4.1.60.Final.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/io/projectreactor/reactor-core/3.4.4/reactor-core-3.4.4.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/com/alibaba/fastjson/1.2.75/fastjson-1.2.75.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
+        <CLASSES>
+          <root url="jar://E:/repositoryjar/eu/bitwalker/UserAgentUtils/1.21/UserAgentUtils-1.21.jar!/"/>
+        </CLASSES>
+      </library> 
+    </orderEntry> 
+  </component>  
+  <component name="ModuleRootManager"/>  
+  <!-- If it's a war project:
+  <component name="WebModuleProperties">
+    <containerElement type="module" name="${dep.artifactId}">
+      <attribute name="method" value="1" />
+      <attribute name="URI" value="/WEB-INF/classes" />
+    </containerElement>
+    <containerElement type="library" level="module" name="${dep.artifactId}">
+      <attribute name="method" value="1" />
+      <attribute name="URI" value="/WEB-INF/lib/${dep.systemPath.name}" />
+    </containerElement>
+    <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/${pom.build.warSourceDirectory}/WEB-INF/web.xml" version="" />
+    <webroots>
+      <root url="file://$MODULE_DIR$/${pom.build.warSourceDirectory}" relative="/" />
+    </webroots>
+  </component>
+  --> 
+</module>

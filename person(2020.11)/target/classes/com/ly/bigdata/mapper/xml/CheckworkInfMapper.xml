@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ly.bigdata.mapper.CheckworkInfMapper">
+
+
+    <resultMap id="CheResultMap" type="CheckworkInf">
+        <id property="id" column="id"/>
+        <result property="deptId" column="dept_id"/>
+        <result property="jobId" column="job_id"/>
+        <result property="empId" column="emp_id"/>
+        <result property="workingdays" column="workingdays"/>
+        <result property="daysleave" column="daysleave"/>
+        <result property="createdate" column="createdate"/>
+        <result property="daysout" column="daysout"/>
+
+        <association property="emp" javaType="EmployeeInf">
+            <id property="id" column="emp_id"/>
+            <result property="name" column="ename"/>
+        </association>
+
+        <association property="job" javaType="JobInf">
+            <id property="id" column="job_id"/>
+            <result property="name" column="jname"/>
+        </association>
+
+        <association property="dept" javaType="DeptInf">
+            <id property="id" column="dept_id"/>
+            <result property="name" column="dname"/>
+        </association>
+    </resultMap>
+
+
+    <select id="selectCheckAll" resultMap="CheResultMap">
+        select ci.*,
+               ei.name ename,
+               di.name dname,
+               ji.name jname
+        from checkwork_inf ci,
+             job_inf ji,
+             employee_inf ei,
+             dept_inf di
+        where ci.dept_id = di.id
+          and ci.job_id = ji.id
+          and ci.emp_id = ei.id
+          and ci.workingdays like #{content}
+
+    </select>
+
+    <select id="selectCheckById" resultMap="CheResultMap">
+        select ci.*,
+               ei.name ename,
+               di.name dname,
+               ji.name jname
+        from checkwork_inf ci,
+             job_inf ji,
+             employee_inf ei,
+             dept_inf di
+        where ci.dept_id = di.id
+          and ci.job_id = ji.id
+          and ci.emp_id = ei.id
+          and ci.id=#{content}
+          and ci.workingdays like #{content}
+    </select>
+
+
+    <select id="findCheById" resultMap="CheResultMap">
+        select ci.*,
+               ei.name ename
+        from checkwork_inf ci,
+             employee_inf ei
+        where  ci.emp_id = ei.id
+          and ci.emp_id = #{emp_id}
+    </select>
+</mapper>

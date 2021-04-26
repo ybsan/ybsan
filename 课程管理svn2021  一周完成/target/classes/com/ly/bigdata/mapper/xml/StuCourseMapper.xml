@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ly.bigdata.mapper.StuCourseMapper">
+
+    <resultMap id="BaseResultMap" type="com.ly.bigdata.entity.StuCourse">
+        <id column="stu_id" property="stuId" />
+        <result column="course_id" property="courseId" />
+        <result column="teacher_id" property="teacherId" />
+        <result column="grade" property="grade" />
+
+        <association property="stu" javaType="com.ly.bigdata.entity.Student">
+            <id property="id" column="id" />
+            <result property="name" column="name" />
+            <result property="sex" column="sex" />
+            <result property="birth" column="birth"/>
+            <result property="password" column="password"/>
+        </association>
+
+        <association property="course" javaType="com.ly.bigdata.entity.Course">
+            <id property="CourseNum" column="CourseNum" />
+            <result property="CourseName" column="CourseName" />
+            <result property="CourseCredit" column="CourseCredit" />
+            <result property="CourseTimes" column="CourseTimes"/>
+            <result property="CourseDesc" column="CourseDesc"/>
+        </association>
+    </resultMap>
+
+
+    <select id="selectAll" resultMap="BaseResultMap">
+        select si.name,tc.*
+		from stu_course sc,tb_course tc,student si
+		where sc.course_id=tc.CourseNum and sc.stu_id=si.id
+		and (tc.CourseName like #{content} or tc.CourseDesc like #{content})
+
+    </select>
+
+</mapper>

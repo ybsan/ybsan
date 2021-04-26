@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ly.bigdata.mapper.MajorMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="MajorResultMap" type="Major">
+        <id column="major_id" property="majorId" />
+        <result column="depart_id" property="departId" />
+        <result column="major_name" property="majorName" />
+        <result column="major_duidance" property="majorDuidance" />
+        <result column="email" property="email" />
+        <result column="major_introduce" property="majorIntroduce" />
+        <association property="depart" javaType="Department">
+            <id property="departId" column="depart_id" />
+            <result property="departName" column="dname" />
+        </association>
+    </resultMap>
+    <select id="selectAll" resultMap="MajorResultMap">
+        select mi.*,
+               di.depart_name  dname
+        from major mi,
+             department di
+        where
+            mi.depart_id = di.depart_id
+          and (di.depart_name like #{content} or mi.major_name like #{content} or mi.major_duidance like #{content} or mi.email like #{content} )
+    </select>
+
+</mapper>

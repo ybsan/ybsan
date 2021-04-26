@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ly.bigdata.mapper.TeacherMapper">
+
+    <resultMap id="BaseResultMap" type="com.ly.bigdata.entity.Teacher">
+        <id column="teacherNum" property="teacherNum" />
+        <result column="deptNum" property="deptNum" />
+        <result column="teacherName" property="teacherName" />
+        <result column="teacherSex" property="teacherSex" />
+        <result column="teacherBirthday" property="teacherBirthday" />
+        <result column="teacherPassword" property="teacherPassword" />
+        <result column="teacherTitle" property="teacherTitle" />
+        
+        <association property="dept" javaType="com.ly.bigdata.entity.Department">
+            <id property="departId" column="deptNum"/>
+            <result property="departName" column="dname"/>
+        </association>
+    </resultMap>
+
+    <select id="findAllTeacher" resultMap="BaseResultMap">
+             select tt.*,dt.depart_name dname from tb_teacher tt,department dt
+             where tt.DeptNum=dt.depart_id and (tt.teachername like #{content})
+    </select>
+
+</mapper>

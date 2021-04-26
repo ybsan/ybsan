@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ly.bigdata.mapper.CourseMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ly.bigdata.entity.Course">
+        <id column="CourseNum" property="courseNum" />
+        <result column="CourseName" property="courseName" />
+        <result column="CourseCredit" property="courseCredit" />
+        <result column="CourseTimes" property="courseTimes" />
+        <result column="CourseDesc" property="courseDesc" />
+    </resultMap>
+
+
+    <select id="staticsSelectCourse" resultType="com.ly.bigdata.entity.Statistics">
+        SELECT tc.CourseName NAME ,COUNT(sc.course_id) VALUE
+        FROM tb_course tc
+        LEFT JOIN stu_course sc
+        ON sc.course_id = tc.CourseNum
+        GROUP BY tc.CourseNum;
+    </select>
+
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebContextManager">
+    <option name="state">
+      <map>
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/checkwork/leaveadd.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/checkwork" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/checkwork/list.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/checkwork" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contract/edit.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contract" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employee/association.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employee" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employee/pedit.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employee" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/loginForm.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/repasswordPage.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp" />
+      </map>
+    </option>
+  </component>
+</project>

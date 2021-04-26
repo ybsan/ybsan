@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ly.bigdata.mapper.ContractInfMapper">
+
+    <resultMap id="ConResultMap" type="ContractInf">
+        <id property="id" column="id"/>
+        <result property="deptId" column="dept_id"/>
+        <result property="jobId" column="job_id"/>
+        <result property="empId" column="emp_id"/>
+
+        <result property="statusId" column="status_id"/>
+        <result property="trainContract" column="train_contract"/>
+        <result property="laborContract" column="labor_contract"/>
+        <result property="createDate" column="create_date"/>
+        <result property="confidentialityContract" column="confidentiality_contract"/>
+
+        <association property="emp" javaType="EmployeeInf">
+            <id property="id" column="emp_id"/>
+            <result property="name" column="empname"/>
+        </association>
+
+        <association property="job" javaType="JobInf">
+            <id property="id" column="job_id"/>
+            <result property="name" column="jname"/>
+        </association>
+
+        <association property="dept" javaType="DeptInf">
+            <id property="id" column="dept_id"/>
+            <result property="name" column="dname"/>
+        </association>
+
+        <association property="lab" javaType="LaborcontractInf">
+            <id property="id" column="labor_contract"/>
+            <result property="name" column="lname"/>
+        </association>
+
+        <association property="tra" javaType="TraincontractInf">
+            <id property="id" column="train_contract"/>
+            <result property="name" column="tname"/>
+        </association>
+
+        <association property="con" javaType="ConfidentialitycontractInf">
+            <id property="id" column="confidentiality_contract"/>
+            <result property="name" column="cname"/>
+        </association>
+
+
+
+    </resultMap>
+
+
+    <select id="selectConAll" resultMap="ConResultMap">
+        select ci.*,
+               ei.name empname,
+               di.name dname,
+               ji.name jname
+        from contract_inf ci,
+             job_inf ji,
+             employee_inf ei,
+             dept_inf di
+        where ci.dept_id = di.id
+          and ci.job_id = ji.id
+          and ci.emp_id = ei.id
+    </select>
+
+    <select id="findConById" resultMap="ConResultMap">
+        select ci.*,
+               ei.name empname,
+               di.name dname,
+               ji.name jname,
+               li.name lname,
+               ti.name tname,
+               coi.name cname
+        from contract_inf ci,
+             job_inf ji,
+             employee_inf ei,
+             dept_inf di,
+            laborcontract_inf li,
+             traincontract_inf ti,
+             confidentialitycontract_inf coi
+        where ci.dept_id = di.id
+          and ci.job_id = ji.id
+          and ci.emp_id = ei.id
+          and ci.confidentiality_contract=coi.id
+          and ci.train_contract = ti.id
+          and ci.labor_contract=li.id
+          and ci.emp_id = #{emp_id}
+    </select>
+
+</mapper>

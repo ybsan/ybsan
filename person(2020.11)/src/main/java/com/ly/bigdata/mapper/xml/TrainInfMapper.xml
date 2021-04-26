@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ly.bigdata.mapper.TrainInfMapper">
+
+    <resultMap id="TraResultMap" type="TrainInf">
+        <id property="id" column="id"/>
+        <result property="deptId" column="dept_id"/>
+        <result property="jobId" column="job_id"/>
+        <result property="empId" column="emp_id"/>
+        <result property="content" column="content"/>
+        <result property="startdata" column="startdata"/>
+        <result property="enddata" column="enddata"/>
+        <result property="totallength" column="totallength"/>
+        <result property="grade" column="grade"/>
+        <result property="completion" column="completion"/>
+        <result property="traintime" column="traintime"/>
+        <association property="emp" javaType="EmployeeInf">
+            <id property="id" column="emp_id"/>
+            <result property="name" column="ename"/>
+        </association>
+
+        <association property="job" javaType="JobInf">
+            <id property="id" column="job_id"/>
+            <result property="name" column="jname"/>
+        </association>
+        <association property="dept" javaType="DeptInf">
+            <id property="id" column="dept_id"/>
+            <result property="name" column="dname"/>
+        </association>
+    </resultMap>
+
+
+    <select id="selectTraAll" resultMap="TraResultMap">
+        select ti.*,
+               ei.name ename,
+               di.name dname,
+               ji.name jname
+        from train_inf ti,
+             job_inf ji,
+             employee_inf ei,
+             dept_inf di
+        where ti.dept_id = di.id
+          and ti.job_id = ji.id
+          and ti.emp_id = ei.id
+
+
+    </select>
+
+
+    <select id="selectTraById" resultMap="TraResultMap">
+        select ti.*,
+               ei.name ename,
+               di.name dname,
+               ji.name jname
+        from train_inf ti,
+             job_inf ji,
+             employee_inf ei,
+             dept_inf di
+        where ti.dept_id = di.id
+          and ti.job_id = ji.id
+          and ti.emp_id = ei.id
+          and ti.emp_id =#{emp_id}
+
+    </select>
+
+
+</mapper>

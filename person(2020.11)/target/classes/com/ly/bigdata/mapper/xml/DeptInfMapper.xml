@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ly.bigdata.mapper.DeptInfMapper">
+
+    <select id="getDeptNumbers" resultType="DeptNum">
+        select di.name,count(1) num from employee_inf ei,dept_inf di where ei.dept_id =di.id GROUP BY ei.dept_id
+    </select>
+
+
+
+</mapper>

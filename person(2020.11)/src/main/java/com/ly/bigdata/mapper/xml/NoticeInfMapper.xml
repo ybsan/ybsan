@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ly.bigdata.mapper.NoticeInfMapper">
+
+   <resultMap id="NotResultMap" type="NoticeInf">
+         <id property="id" column="id"/>
+         <result property="userId" column="user_id"/>
+         <result property="title" column="title"/>
+         <result property="content" column="content"/>
+         <result property="createdate" column="createdate"/>
+         <association property="user" javaType="UserInf">
+             <id property="id" column="user_id" />
+             <result property="username" column="username" />
+         </association>
+     </resultMap>
+
+
+    <select id="selectNoticeAll" resultMap="NotResultMap">
+        select ni.*,
+               ui.username
+        from notice_inf ni,
+             user_inf ui
+        where
+            ni.user_id = ui.id
+          and ni.title like #{content}
+
+    </select>
+
+
+
+</mapper>

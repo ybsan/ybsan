@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ly.bigdata.mapper.LeaveInfMapper">
+
+    <resultMap id="LeaResultMap" type="LeaveInf">
+        <id property="id" column="id"/>
+        <result property="deptId" column="dept_id"/>
+        <result property="jobId" column="job_id"/>
+        <result property="empId" column="emp_id"/>
+        <result property="startdata" column="startdata"/>
+        <result property="enddata" column="enddata"/>
+        <result property="leavedays" column="leavedays"/>
+        <result property="leavetype" column="leavetype"/>
+        <result property="content" column="content"/>
+        <result property="leavestatus" column="leavestatus"/>
+        <result property="leavetime" column="leavetime"/>
+
+
+        <association property="emp" javaType="EmployeeInf">
+            <id property="id" column="emp_id"/>
+            <result property="name" column="ename"/>
+        </association>
+
+        <association property="job" javaType="JobInf">
+            <id property="id" column="job_id"/>
+            <result property="name" column="jname"/>
+        </association>
+
+        <association property="dept" javaType="DeptInf">
+            <id property="id" column="dept_id"/>
+            <result property="name" column="dname"/>
+        </association>
+    </resultMap>
+
+
+    <select id="selectLeaAll" resultMap="LeaResultMap">
+        select li.*,
+               ei.name ename,
+               di.name dname,
+               ji.name jname
+        from leave_inf li,
+             job_inf ji,
+             employee_inf ei,
+             dept_inf di
+        where li.dept_id = di.id
+          and li.job_id = ji.id
+          and li.emp_id = ei.id
+
+    </select>
+
+    <select id="selectLeaById" resultMap="LeaResultMap">
+        select li.*,
+               ei.name ename,
+               di.name dname,
+               ji.name jname
+        from leave_inf li,
+             job_inf ji,
+             employee_inf ei,
+             dept_inf di
+        where li.dept_id = di.id
+          and li.job_id = ji.id
+          and li.emp_id = ei.id
+          and li.emp_id = #{emp_id}
+    </select>
+
+
+</mapper>

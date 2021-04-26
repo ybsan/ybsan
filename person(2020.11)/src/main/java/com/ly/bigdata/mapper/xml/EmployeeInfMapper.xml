@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ly.bigdata.mapper.EmployeeInfMapper">
+
+    <resultMap id="EmpResultMap" type="EmployeeInf">
+        <id property="id" column="id" />
+        <result property="userId" column="user_id" />
+        <result property="name" column="name" />
+        <result property="address" column="address" />
+        <result property="cardId" column="card_id" />
+        <result property="phone" column="phone" />
+        <result property="createdate" column="createdate" />
+        <association property="dept" javaType="DeptInf">
+            <id property="id" column="dept_id" />
+            <result property="name" column="dname" />
+        </association>
+        <association property="job" javaType="JobInf">
+            <id property="id" column="dept_id" />
+            <result property="name" column="jname" />
+        </association>
+        <association property="education" javaType="EducationInf">
+            <id property="id" column="education_id" />
+            <result property="name" column="ename" />
+        </association>
+        <association property="user" javaType="UserInf">
+            <id property="id" column="user_id" />
+            <result property="loginname" column="loginname" />
+            <result property="email" column="email" />
+        </association>
+        <association property="sex" javaType="SexInf">
+            <id property="id" column="sex_id" />
+            <result property="name" column="sname" />
+        </association>
+    </resultMap>
+
+
+    <select id="selectEmployeeAll" resultMap="EmpResultMap">
+        select ei.*,
+               di.name  dname,
+               ji.name jname,
+               edi.name ename,
+               ui.loginname,
+               ui.email
+        from employee_inf ei,
+             dept_inf di,
+             job_inf ji,
+             education_inf edi,
+             user_inf ui
+        where
+            ei.dept_id = di.id
+          and ei.job_id = ji.id
+          and ei.education_id = edi.id
+          and ei.user_id = ui.id
+          and (ei.name like #{content} or ei.address like #{content})
+    </select>
+
+    <select id="findEmpById" resultMap="EmpResultMap">
+        select ei.*,
+               di.name  dname,
+               ji.name jname,
+               edi.name ename,
+               ui.loginname,
+               ui.email,
+               si.name sname
+        from employee_inf ei,
+             dept_inf di,
+             job_inf ji,
+             education_inf edi,
+             user_inf ui,
+             sex_inf si
+        where
+            ei.dept_id = di.id
+          and ei.job_id = ji.id
+          and ei.education_id = edi.id
+          and ei.user_id = ui.id
+          and ei.sex_id = si.id
+         and ei.id=#{id}
+    </select>
+
+</mapper>

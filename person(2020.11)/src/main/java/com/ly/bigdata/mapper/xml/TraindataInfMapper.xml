@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ly.bigdata.mapper.TraindataInfMapper">
+
+    <resultMap id="TraResultMap" type="TraindataInf">
+        <id property="id" column="id"/>
+
+        <result property="title" column="title"/>
+        <result property="filename" column="filename"/>
+        <result property="remark" column="remark"/>
+        <result property="createdate" column="createdate"/>
+        <result property="userId" column="user_id"/>
+        <association property="emp" javaType="EmployeeInf">
+            <id property="id" column="user_id" />
+            <result property="name" column="name" />
+        </association>
+    </resultMap>
+
+
+    <select id="selectTrdAll" resultMap="TraResultMap">
+        select ti.*,
+               ei.name
+        from traindata_inf ti,
+             employee_inf ei
+        where
+            ti.user_id = ei.id
+    </select>
+
+
+</mapper>
